@@ -1,0 +1,36 @@
+<section class="containerContact">
+  <div><h2 class="titleAbout">Contact me</h2></div>
+  <div>
+    <p class="textContact">Please contact me via this form and I will reply back within 24 hours.</p>
+    <p class="textContact">Or call me at <a href="tel:+543513326770">+54 3513326770</a>.</p>
+    <p class="textContact">E-mail: <a href="mailto:guillealta1331@gmail.com">guillealta1331@gmail.com</a>.</p>
+  </div>
+  <div>
+    <form [formGroup]="formContact">
+      <div>
+        <label for="name">Name *</label>
+        <input type="text" id="name" formControlName="name">
+        <span *ngIf="formContact.get('name')?.errors?.['minLength']">The minimum number of characters is</span>
+        <span *ngIf="formContact.get('name')?.errors?.['required']">This field is required</span>
+      </div>
+      <div>
+        <label for="E-mail">E-mail *</label>
+        <input type="email" id="email" formControlName="email">
+        <span *ngIf="formContact.get('email')?.errors?.['email']">The minimum number of characters is</span>
+        <span *ngIf="formContact.get('email')?.errors?.['required']">This field is required</span>
+      </div>
+      <div>
+        <label for="phone">Cell phone *</label>
+        <input type="number" id="phone" formControlName="phone">
+        <span *ngIf="formContact.get('phone')?.errors?.['pattern']">It must contain a correct number.</span>
+        <span *ngIf="formContact.get('phone')?.errors?.['required']">The phone number is required.</span>
+      </div>
+      <div>
+        <label for="description">How can we help?</label>
+        <textarea type="text" id="description" formControlName="description"></textarea>
+        <span *ngIf="formContact.get('description')?.errors?.['maxLength']">The allowed number of characters is 50.</span>
+      </div>
+      <button>Send</button>
+    </form>
+  </div>
+</section>

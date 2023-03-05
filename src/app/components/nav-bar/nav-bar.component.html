@@ -1,0 +1,36 @@
+<nav ngClass="containerNav {'containerNav : isScrolled'}">
+  <div class="containerIconos">
+    <a href="https://github.com/GuilleAltamirano"><img src="https://cdn-icons-png.flaticon.com/512/1051/1051326.png" alt="img github" class="navIcono"></a>
+    <a href="https://www.linkedin.com/in/guillermo-altamirano-6u1773/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384014.png" class="navIcono" alt="img linkedin"></a>
+    <a href="https://www.instagram.com/guille_altamirano_/"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="img de instagram" class="navIcono"></a>
+  </div>
+  <div class="containerText">
+    <a href="#">
+      <span class="textOneNav">Develop -</span>
+      <span class="textTwoNav">- Desing</span>
+    </a>
+  </div>
+  <div class="containerText">
+    <a href="#" class="textNav">{{'About' | translate}}</a>
+    <a href="#" class="textNav">Skills</a>
+    <a href="#" class="textNav">Contact</a>
+  </div>
+</nav>
+
+<div class="containerBottomNav">
+  <div>
+    <button (click)="isEn()">
+      <span>En-/</span>
+      <span>-Sp</span>
+    </button>
+  </div>
+  <div>
+    <button (click)="isBW()">
+      <span>B&W-/</span>
+      <span>-Color</span>
+    </button>
+  </div>
+  <div>
+    <a href="https://wa.me/3513326770"><img src="https://cdn-icons-png.flaticon.com/512/733/733641.png" alt="Icono de whatsApp" class="iconWa"></a>
+  </div>
+</div>
